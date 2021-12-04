@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    max-width: 1366px;
+    width: 100%;
+    margin: auto;
+}
+.block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.section_header{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.block_header{
+    padding-left: 105px;
+    padding-right: 105px;
+}
+.menu_button{
+    padding-right: 20px;
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    color: #939699;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 20px;
+}
+.cart{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.button_cart{
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 10px 20px 10px 48px;
+    cursor: pointer;
+    height: 40px;
+}
+.button_cart_img{
+    background:url(../img/Cart.svg) no-repeat 20px center;
+}
+.button--primary {
+    background-color: #4592FF;
+    color: #FFFFFF;
+    border:none;
+}
+.best{
+    padding: 5px 12px;
+    cursor: pointer;
+}
+.best--primary{
+    font-family: 'Lato', sans-serif;
+    color:#FFFFFF;
+    font-size: 12px;
+    line-height: 15px;
+    border:none;
+    background:#3DC47E;
+    border-radius: 3px;
+}
+
+.block_sweater{
+    background: #B4D1E0 url(../img/bg319.png) no-repeat left 416px center;
+}
+.sectiontitle{
+    margin-top: 20px;
+    margin-bottom: 15px;
+    max-width:458px;
+    font-family: 'Roboto Slab', serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 55px;
+    line-height: 70px;
+    color: #262D33;
+}
+.section_sweater {
+    align-items: center;
+    padding-top: 90px;
+    padding-bottom: 110px;
+}
+.sectiontext {
+    max-width: 335px;
+    margin-bottom: 40px;
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 30px;
+    color: #4B5157;
+}
+.button_shop{
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 10px 25px 10px 20px;
+    cursor: pointer;
+    height: 40px;
+}
+.button_shop::before{
+    content: "$319";
+    padding: 10px;
+}
+.sweater {
+    max-width: 946px;
+    margin: auto;
+}
+.sweater::before {
+    content: "";
+    position: absolute;
+    left: 370px;
+    top: 320px;
+    background-image: url(../img/Arrowleft.png);
+    width: 60px;
+    height: 60px;
+    opacity: 0.7;
+}
+.sweater::after {
+    content: "";
+    position: absolute;
+    right: 370px;
+    top: 320px;
+    background-image: url(../img/Arrowrght.png);
+    width: 60px;
+    height: 60px;
+    opacity: 0.7;
+}
+
+.section_products {
+    flex-wrap: wrap;
+    margin-top: 15px;
+    max-width: 1160px;
+    width: 100%;
+}
+
+.fashion {
+    max-width: 563px;
+    background: url(../img/fashion.png) no-repeat;
+    padding: 60px 296px 80px 49px;
+    margin-top: 50px;
+    border-radius: 10px;
+}
+
+.fashion_title {
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 30px;
+}
+
+.p_fashion {
+    font-family: 'Roboto Slab', serif;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.button_fashion {
+    padding: 10px 45px 10px 20px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    border-radius: 20px;
+    background: #4592FF url(../img/Arrow.svg) no-repeat left 78px top 17px;
+    cursor: pointer;
+}
+
+.catch {
+   max-width: 565px;
+   background: url(../img/catch.png) no-repeat;
+   border-radius: 10px;
+    padding: 60px 296px 80px 49px;
+    margin-top: 50px;
+}
+
+.catch_title {
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 30px;
+    color: #FFFFFF;
+}
+
+.p_catch {
+    font-family: 'Roboto Slab', serif;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #FFFFFF;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    opacity: 0.85;
+}
+
+.poplin {
+    max-width: 860px;
+    width: 100%;
+    background: #CCD5E6 url(../img/genshina.png) no-repeat right;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.top {
+    padding-left: 46px;    
+}
+
+.title_poplin {
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 50px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.p_poplin {
+    font-family: 'Lato', sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 40px;
+}
+
+.best_poplin {
+    margin-top: 35px;
+}
+
+.bshop_poplin {
+    margin-bottom: 60px;
+}
+
+.bg_print {
+    background: #FF4F52 url(../img/print.png) no-repeat right;
+}
+
+.print {
+    max-width: 272px;
+    width: 100%;
+    padding-left: 26px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+.print_title {
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 30px;
+    color: #FFFFFF;
+    margin-top: 35px;
+}
+
+.p_print{
+    font-family: 'Lato', sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #FFC4C9;
+    margin-top: 10px;
+}
+
+.price_print {
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 20px;
+    color: #FFFFFF;
+    margin-top: 15px;
+    margin-bottom: 210px;
+}
