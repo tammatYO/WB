@@ -31,6 +31,10 @@
     font-weight: 900;
     font-size: 14px;
     line-height: 20px;
+    transition: all .3s;
+}
+.menu_button:hover {
+    color: black;
 }
 .cart{
     padding-top: 15px;
@@ -38,7 +42,6 @@
 }
 .button_cart{
     font-family: 'Lato', sans-serif;
-    font-weight: bold;
     border-radius: 20px;
     padding: 10px 20px 10px 48px;
     cursor: pointer;
@@ -51,6 +54,10 @@
     background-color: #4592FF;
     color: #FFFFFF;
     border:none;
+    transition: all .3s;
+}
+.button--primary:hover {
+    background-color: rgb(0, 36, 240);
 }
 .best{
     padding: 5px 12px;
@@ -65,11 +72,19 @@
     background:#3DC47E;
     border-radius: 3px;
 }
-
-.block_sweater{
-    background: #B4D1E0 url(../img/bg319.png) no-repeat left 416px center;
+.green {
+    font-family: 'Lato', sans-serif;
+    color:#FFFFFF;
+    font-size: 12px;
+    line-height: 15px;
+    background: #3DC47E;
+    border-radius: 3px;
+    padding: 5px 12px;
 }
-.sectiontitle{
+.block_sweater{
+    background: #B4D1E0 url(../img/sweater.png) no-repeat left 416px center;
+}
+.section__title{
     margin-top: 20px;
     margin-bottom: 15px;
     max-width:458px;
@@ -80,12 +95,24 @@
     line-height: 70px;
     color: #262D33;
 }
+
+.product_title_white {
+  color:#FFFFFF;
+}
+
+.product_text_white {
+    color:#FFFFFF;
+    opacity: 0.85;
+}
+.product_text_pink {
+    color: #FFC4C9;
+}
 .section_sweater {
     align-items: center;
     padding-top: 90px;
     padding-bottom: 110px;
 }
-.sectiontext {
+.section__text {
     max-width: 335px;
     margin-bottom: 40px;
     font-family: 'Lato', sans-serif;
@@ -97,7 +124,6 @@
 }
 .button_shop{
     font-family: 'Lato', sans-serif;
-    font-weight: bold;
     border-radius: 20px;
     padding: 10px 25px 10px 20px;
     cursor: pointer;
@@ -107,6 +133,10 @@
     content: "$319";
     padding: 10px;
 }
+.poplin_top .button_shop::before{
+    content: "$129";
+    padding: 10px;
+}
 .sweater {
     max-width: 946px;
     margin: auto;
@@ -114,164 +144,588 @@
 .sweater::before {
     content: "";
     position: absolute;
-    left: 370px;
-    top: 320px;
-    background-image: url(../img/Arrowleft.png);
+    background-image: url(../img/Arrow-left.svg);
+    margin: 170px -100px ;
+    opacity: 0.5;
     width: 60px;
     height: 60px;
-    opacity: 0.7;
+    cursor:pointer;
 }
 .sweater::after {
     content: "";
     position: absolute;
-    right: 370px;
-    top: 320px;
-    background-image: url(../img/Arrowrght.png);
+    background-image: url(../img/Arrow-right.svg);
+    margin: -160px 830px;
+    opacity: 0.5;
     width: 60px;
     height: 60px;
-    opacity: 0.7;
+    cursor:pointer;
 }
-
 .section_products {
-    flex-wrap: wrap;
-    margin-top: 15px;
+    margin-top: 50px;
+}
+.products {
     max-width: 1160px;
     width: 100%;
+    margin: auto;
+    flex-wrap: wrap;
 }
-
-.fashion {
-    max-width: 563px;
-    background: url(../img/fashion.png) no-repeat;
-    padding: 60px 296px 80px 49px;
-    margin-top: 50px;
-    border-radius: 10px;
+.poiner{
+    cursor:pointer;
 }
-
-.fashion_title {
-    font-family: 'Roboto Slab', serif;
+.product_title {
+    max-width: 222px;
+    font-family: Roboto Slab;
+    font-style: normal;
     font-weight: bold;
     font-size: 25px;
     line-height: 30px;
+    margin-bottom: 15px;
 }
-
-.p_fashion {
-    font-family: 'Roboto Slab', serif;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 20px;
-    margin-top: 15px;
-    margin-bottom: 25px;
-}
-
-.button_fashion {
-    padding: 10px 45px 10px 20px;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 20px;
-    border-radius: 20px;
-    background: #4592FF url(../img/Arrow.svg) no-repeat left 78px top 17px;
-    cursor: pointer;
-}
-
-.catch {
-   max-width: 565px;
-   background: url(../img/catch.png) no-repeat;
-   border-radius: 10px;
-    padding: 60px 296px 80px 49px;
-    margin-top: 50px;
-}
-
-.catch_title {
-    font-family: 'Roboto Slab', serif;
-    font-weight: bold;
-    font-size: 25px;
-    line-height: 30px;
-    color: #FFFFFF;
-}
-
-.p_catch {
-    font-family: 'Roboto Slab', serif;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 20px;
-    color: #FFFFFF;
-    margin-top: 15px;
-    margin-bottom: 25px;
-    opacity: 0.85;
-}
-
-.poplin {
-    max-width: 860px;
-    width: 100%;
-    background: #CCD5E6 url(../img/genshina.png) no-repeat right;
-    border-radius: 10px;
-    margin-top: 30px;
-}
-
-.top {
-    padding-left: 46px;    
-}
-
-.title_poplin {
-    font-family: 'Roboto Slab', serif;
-    font-weight: bold;
+.section_title_smaller {
     font-size: 40px;
     line-height: 50px;
-    margin-top: 30px;
-    margin-bottom: 20px;
+    max-width: 418px;
+    max-height: 100px;
 }
-
-.p_poplin {
-    font-family: 'Lato', sans-serif;
+.product_text {
+    font-family: Lato;
+    font-style: normal;
     font-weight: normal;
     font-size: 14px;
     line-height: 20px;
-    margin-bottom: 40px;
+    max-width: 176px;
+    margin-bottom: 25px;
 }
-
-.best_poplin {
-    margin-top: 35px;
-}
-
-.bshop_poplin {
-    margin-bottom: 60px;
-}
-
-.bg_print {
-    background: #FF4F52 url(../img/print.png) no-repeat right;
-}
-
-.print {
-    max-width: 272px;
-    width: 100%;
-    padding-left: 26px;
+.product_metka {
+    max-width: 563px;
+    height: 370px;
+    padding: 60px 296px 145px 46px;
     border-radius: 10px;
+    transition: all .3s;
+}
+.product_metka:hover {
+    transform: translateY(-10px);
+} 
+.product_metka_wide {
+  max-width: 860px;
+  height: 370px;
+  border-radius: 10px;
+  padding: 35px 395px 60px 46px;
+  transition: all .3s;
+}
+.product_metka_wide:hover {
+    transform: translateY(-10px);
+}
+.product_metka_small {
+    max-width: 272px;
+    height: 370px;
     margin-top: 30px;
+    border-radius: 10px;
+    transition: all .3s;
 }
-.print_title {
-    font-family: 'Roboto Slab', serif;
-    font-weight: bold;
-    font-size: 25px;
-    line-height: 30px;
+.product_metka_small:hover {
+    transform: translateY(-20px);
+}
+.fashion-month {
+    background-image: url(../img/fashionmonth.png);
+}
+.style_sun {
+    background-image: url(../img/sun-style.png);
+}
+.poplin_top {
+    background: #CCD5E6 url(../img/sad_women.png) no-repeat left 270px center;
+    margin-top: 30px;
+    width: 100%;
+}
+.button_view_img{
+    background: url(../img/Arrow-product.svg) no-repeat 78px center;
+}
+.button_view {
+    background-color: #4592FF;
     color: #FFFFFF;
-    margin-top: 35px;
+    border:none;
+    border-radius: 20px;
+    padding: 10px 45px 10px 20px;
+    transition: all .3s;
 }
 
-.p_print{
-    font-family: 'Lato', sans-serif;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 20px;
-    color: #FFC4C9;
-    margin-top: 10px;
+.button_view:hover {
+    background-color: rgb(24, 69, 219);
 }
 
-.price_print {
-    font-family: 'Lato', sans-serif;
+.micro_women{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin: -250px 710px;
+    max-width: 50px;
+    max-height: 50px;
+}
+.jenshina {
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 3px;
+    border-spacing: 0;
+    margin-bottom: -4px;
+}
+.micro_women img:first-child {
+    background: #FFFFFF;
+}
+.printed_shit {
+    background: #FF4F52 url(../img/glasses_octopus.png) no-repeat left 54px center;
+    width: 100%;
+    padding: 35px 36px 210px 26px;
+}
+.printed_shit .product_text {
+    margin-bottom: 15px;
+}
+.imposter_price {
+    font-family: Lato;
+    font-style: normal;
     font-weight: 900;
     font-size: 14px;
     line-height: 20px;
     color: #FFFFFF;
-    margin-top: 15px;
-    margin-bottom: 210px;
+}
+.view {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 20px;
+    text-decoration: none;
+    color: #262D33;
+}
+.section_new_arrival {
+    margin-top: 60px;
+    max-width: 1140px;
+}
+.new_arrival_title{
+    font-family: Roboto Slab;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 30px;
+}
+.product_card .best {
+    content:"";
+    position: absolute;
+    margin-left: -160px;
+    margin-top: -20px;
+}
+.product_card .section__text {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 20px;
+
+}
+.product_card {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    margin-top: 70px;
+    max-width: 263px;
+    height: 370px;
+    transition: all .3s;
+}
+.product_card:hover {
+    transform: translateY(-10px);
+}
+.product_price {
+    color:#262D33;
+    font-family: Lato;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 30px;
+}
+.product_card .product_title {
+    max-width: 213px;
+    font-size: 16px;
+    line-height: 25px;
+}
+footer{
+    background: #8F79D4;
+    padding: 45px 113px 35px 113px;
+}
+.footer-top{
+    display: flex;
+}
+.footer_button{
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 20px;
+    text-decoration: none;
+    color:#FFFFFF;
+    padding-right: 40px;
+    transition: all .3s;
+}
+.footer_button:hover {
+    color: rgb(185, 185, 185);
+}
+.footer_button:last-child {
+    padding-right:0;
+    margin-right: 230px;
+}
+.follow{
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color:#E7D9FF;
+    margin-right: 30px;
+}
+.socials{ 
+    display: flex;
+}
+.footer_top{
+    display: flex;
+    align-items: center;
+    border-bottom:#D8BFFF 1px solid;
+    padding-bottom: 44px;
+}
+.social_img1{
+    margin-right: 21px;
+}
+.social_img2{
+    margin-right: 17px;
+}
+.copyright{
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color:#E7D9FF;
+    padding-left: 115px;
+}
+.cards{
+    padding-top: 36px;
+}
+.card{
+    padding-right: 25px;
+}
+
+.card:last-child {
+    padding-right: 0;
+}
+
+.footer_bottom{
+    display: flex;
+    align-items: center;
+}
+.social_img {
+    transition: all .3s; 
+}
+.social_img:hover {
+    transform: scale(1.5);
+}
+.back_to_top .footer_button{
+    margin-left: 683px;
+    padding-top: 35px;
+    margin-right: 0px;
+    padding-right: 0;
+}
+.arrow_up{
+    padding-top: 35px;
+    padding-left: 15px;
+}
+
+
+@media (max-width: 1370px) {
+    .copyright {
+        display: none;
+    }
+    .footer_top {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 1340px) {
+    .cards {
+        display: flex;
+        align-items: center;
+    }
+    .visa_card {
+        max-height: 19px;
+    }
+}
+
+@media (max-width: 1330px) {
+    .footer_bottom {
+        justify-content: center;
+    }
+    .footer_back_to_top {
+        display: none;
+    }
+    .arrow_up {
+        display: none;
+    }
+}
+
+@media (max-width: 1150px) {
+    .sweater::before {
+        position: absolute;
+        margin: 0;
+        top: 40%;
+        left: 2%;
+    }
+    .sweater::after {
+        position: absolute;
+        margin: 0;
+        top: 40%;
+        right: 2%;
+    }
+    .sweater {
+        margin: 0 10%;
+    }
+    .block_sweater {
+        background: #B4D1E0 url(../img/sweater.png) no-repeat left 380px center;
+    }
+    .block {
+        display: flex;
+        justify-content: space-around;
+    }
+    .fashion-month {
+        background: url(../img/fashionmonth.png) left -40px center;
+    }
+    .product_metka {
+        padding: 40px 70px 20px 40px;
+    }
+    .block_outifts {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .contacts {
+        display: none;
+    }
+}
+
+@media (max-width: 1105px) {
+    .follow {
+        display: none;
+    }
+}
+
+@media (max-width: 990px) {
+    .block_header {
+        padding: 0 50px;
+    }
+    .block_sweater {
+        background: #B4D1E0 url(../img/sweater.png) no-repeat left 330px center;
+    }
+}
+
+@media (max-width: 900px) {
+    .block_sweater {
+        background: #B4D1E0 url(../img/sweater.png) no-repeat left 280px center;
+    }
+}
+
+@media (max-width: 830px) {
+    .menu_button_1 {
+        display: none;
+    }
+    .block_sweater {
+        background: #B4D1E0;
+    }
+    .sweater {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .micro_women {
+        position: absolute;
+        margin: 0;
+        top: 138%;
+        left: 90%;
+    }
+}
+
+@media (max-width: 780px) {
+    .title_poplin {
+        font-size: 30px;
+    }
+    .block_outifts {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .product_card {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+    .t-shirt_card {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+}
+
+@media (max-width: 740px) {
+    .menu_button_2 {
+        display: none;
+    }
+    .blog {
+        display: none;
+    }
+}
+
+@media (max-width: 680px) {
+    .menu_button_3 {
+        display: none;
+    }
+    .block {
+        display: flex;
+        justify-content: space-around;
+    }
+    .product_metka {
+        padding: 60px 296px 145px 46px;
+    }
+    .fashion-month {
+        margin-bottom: 20px;
+    }
+    .micro_women {
+        position: absolute;
+        margin: 0;
+        top: 178%;
+        left: 90%;
+    }
+    .product_metka_wide {
+        padding: 35px 325px 60px 46px;
+    }
+    .faq {
+        display: none;
+    }
+}
+
+@media (max-width: 615px) {
+    .menu_button_4 {
+        display: none;
+    }
+    .product_metka_wide {
+        padding: 35px 230px 60px 46px;
+    }
+}
+
+@media (max-width: 580px) {
+    .careers {
+        display: none;
+    }
+}
+
+@media (max-width: 540px) {
+    .block_outifts {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 520px) {
+    .sweater::before {
+        position: absolute;
+        margin: 0;
+        top: 47%;
+        left: 25%;
+    }
+    .sweater::after {
+        position: absolute;
+        margin: 0;
+        top: 47%;
+        right: 25%;
+    }
+    .product_metka {
+        padding: 40px 70px 20px 40px;
+    }
+    .product_metka_wide {
+        padding: 35px 105px 60px 46px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu_button_5 {
+        display: none;
+    }
+    .poplin_top {
+        background: #CCD5E6 url(../img/sad_women.png) no-repeat left 200px center;
+    }
+    .sweater::after {
+        position: absolute;
+        margin: 0;
+        top: 47%;
+        right: 25%;
+    }
+    .sweater::before {
+        position: absolute;
+        margin: 0;
+        top: 47%;
+        right: 10%;
+    }
+    .abutus {
+        display: none;
+    }
+}
+
+@media (max-width: 420px) {
+    .block_sweater {
+        padding: 20px 0;
+    }
+    .sweater::before {
+        position: absolute;
+        margin: 0;
+        top: 40%;
+        left: 10%;
+    }
+    .sweater::after {
+        position: absolute;
+        margin: 0;
+        top: 40%;
+        right: 10%;
+    }
+    .micro_women {
+        position: absolute;
+        margin: 0;
+        top: 168%;
+        left: 90%;
+    }
+}
+
+@media (max-width: 400px) {
+    .menu_button_6 {
+        display: none;
+    }
+    .block_header {
+        display: flex;
+        justify-content: space-around;
+        padding: 0 20px;
+    }
+    .product_metka_wide {
+        padding: 35px 55px 60px 46px;
+    }
+}
+
+@media (max-width: 370px) {
+    .title_sweater {
+       font-size: 40px 
+    }
+    .title_sweater_fashion {
+        font-size: 20px;
+    }
+    .sweater::before {
+        position: absolute;
+        margin: 0;
+        top: 53%;
+        left: 5%;
+    }
+    .sweater::after {
+        position: absolute;
+        margin: 0;
+        top: 53%;
+        right: 5%;
+    }
 }
